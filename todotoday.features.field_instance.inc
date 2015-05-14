@@ -10,6 +10,46 @@
 function todotoday_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-todotoday_task-field_description'
+  $field_instances['node-todotoday_task-field_description'] = array(
+    'bundle' => 'todotoday_task',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'We got the Pantheon site working finally thank God. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -1,
+    ),
+  );
+
   // Exported field_instance: 'node-todotoday_task-field_due_date'
   $field_instances['node-todotoday_task-field_due_date'] = array(
     'bundle' => 'todotoday_task',
@@ -109,8 +149,10 @@ function todotoday_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Description');
   t('Due');
   t('Status');
+  t('We got the Pantheon site working finally thank God. ');
 
   return $field_instances;
 }
